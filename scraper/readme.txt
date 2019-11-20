@@ -8,7 +8,7 @@ Step 2: Download desired images
   - Edit config.json if needed 
     - Googleimagesdownload Docs:
       - https://github.com/hardikvasa/google-images-download
-      - https://google-images-download.readthedocs.io/en/latest/examples.html#)
+      - https://google-images-download.readthedocs.io/en/latest/examples.html#
   - run 'googleimagesdownload -cf config.json'
 
 ===============================================
