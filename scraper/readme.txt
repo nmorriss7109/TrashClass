@@ -1,9 +1,7 @@
 ===============================================
-Step 1: Install googleimagesdownload
-  - cd google-images-download
-  - python setup.py install
-  OR:
+Step 1: Install googleimagesdownload and Pillow
   - pip install google_images_download
+  - pip install Pillow
 
 ===============================================
 Step 2: Download desired images
