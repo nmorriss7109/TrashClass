@@ -1,0 +1,12 @@
+{
+    "Comment": "run 'googleimagesdownload -cf config.json'",
+    "Records": [
+        {
+            "keywords": "trash",
+            "suffix_keywords": "plastic,soda can,cardboard,cigarette butt,paper,glass",
+            "limit": 30,
+            "print_urls": false,
+            "format": "jpg"
+        }
+    ]
+}
