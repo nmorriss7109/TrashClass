@@ -17,11 +17,15 @@ for path in subDirs:
             itemPath = os.path.join(path, item)
             if os.path.isfile(itemPath):
                 count+=1
-                im = Image.open(itemPath)
-                f, e = os.path.splitext(itemPath)
-                imResize = im.resize((512,384), Image.ANTIALIAS)
-                os.remove(itemPath)
-                imResize.save(os.path.join(path, os.path.basename(path) + str(count) + '.jpg'), 'JPEG', quality=90)
+                try:
+                    im = Image.open(itemPath)
+                    f, e = os.path.splitext(itemPath)
+                    imResize = im.resize((400,400), Image.ANTIALIAS)
+                    #print(itemPath)
+                    os.remove(itemPath)
+                    imResize.save(os.path.join(path, os.path.basename(path) + str(count) + '.jpg'), 'JPEG', quality=90)
+                except:
+                    print("An exception occurred!")
         return count
 
     print("Resized " + str(resize()) + " images.")
