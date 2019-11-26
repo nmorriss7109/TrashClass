@@ -329,8 +329,9 @@ public class Main extends Application {
                     return "Paper";
                 }
             }
-        } else {
-            if (t.getSmoo() == Smoothness.SMOOTH) {
+        }
+
+        if (t.getSmoo() == Smoothness.SMOOTH) {
                 if (t.getTrans() == Transparency.TRANSPARENT) {
                     return "Glass";
                 } else if (t.getTrans() == Transparency.TRANSLUCENT) {
@@ -348,7 +349,7 @@ public class Main extends Application {
                 }
 
             }
-        }
+
         return "Error";
     }
 
