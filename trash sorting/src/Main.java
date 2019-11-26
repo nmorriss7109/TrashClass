@@ -286,6 +286,7 @@ public class Main extends Application {
         canvas.getChildren().add(tr);
         HBox textPane = new HBox(canvas);
         textPane.setAlignment(Pos.CENTER);
+
         
 
 
@@ -294,7 +295,7 @@ public class Main extends Application {
 
         VBox properties = new VBox(firstProperty, secondProperty, thirdProperty, fourthProperty, fifthProperty,
                 buttonBox, textPane);
-        properties.setSpacing(30);
+        properties.setSpacing(40);
         main.setCenter(properties);
 
         // setting size of all radiobuttons
@@ -321,26 +322,26 @@ public class Main extends Application {
             return "Metal";
         }
 
-        if (t.getShape() == Shape.RECTANGULAR) {
-            if (t.getTrans() == Transparency.OPAQUE) {
-                if (t.getCol() == Color1.BROWN) {
-                    return "Cardboard";
-                } else {
-                    return "Paper";
-                }
-            }
-        }
-
         if (t.getSmoo() == Smoothness.SMOOTH) {
                 if (t.getTrans() == Transparency.TRANSPARENT) {
                     return "Glass";
                 } else if (t.getTrans() == Transparency.TRANSLUCENT) {
                     return "Plastic";
                 } else if (t.getShape() == Shape.CYLINDER) {
-                    if (t.getCol() == Color1.BROWN || t.getCol2() == Color1.WHITE) {
+                    if (t.getCol() == Color1.BROWN || t.getCol() == Color1.WHITE || t.getCol() == Color1.WHITE && t.getCol2()==Color1.BROWN
+                    || t.getCol2() == Color1.WHITE && t.getCol()==Color1.BROWN) {
                         return "Cigarette Bud";
                     }
-                }
+                } else if (t.getTrans() == Transparency.OPAQUE) {
+                        if (t.getCol() == Color1.BROWN) {
+                            return "Cardboard";
+                        } else if (t.getCol() == Color1.WHITE){
+                            return "Paper";
+                        } else {
+                            return "Plastic";
+                        }
+                    }
+
             } else if (t.getSmoo() == Smoothness.WRINKLY) {
                 if (t.getTrans() == Transparency.TRANSLUCENT) {
                     return "Plastic";
